@@ -1,2 +1,2 @@
-# M365DSC GitHub Actions Azure Testing
+# M365 Desired State Configuration 
 
