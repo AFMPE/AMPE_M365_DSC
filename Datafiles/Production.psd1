@@ -12,7 +12,7 @@
         Environment    = @{
             Name             = 'Production'
             ShortName        = 'PRD'
-            OrganizationName = "checkyourpockets.club"
+            OrganizationName = "missionpartners.us"
         }
         
         Accounts       = @(
@@ -39,10 +39,10 @@
         Exchange       = @{
             OrganizationalRelationships = @(
                 @{
-                    Name                  = "checkyourpockets.club"
+                    Name                  = "missionpartners.us"
                     ArchiveAccessEnabled  = $false
                     DeliveryReportEnabled = $false
-                    DomainNames           = @("checkyourpockets.club")
+                    DomainNames           = @("missionpartners.us")
                     Enabled               = $true
                     FreeBusyAccessEnabled = $true
                     FreeBusyAccessLevel   = "LimitedDetails"
@@ -60,7 +60,7 @@
 
             AcceptedDomains             = @(
                 @{
-                    Identity        = "checkyourpockets.club"
+                    Identity        = "missionpartners.us"
                     DomainType      = 'Authoritative'
                     MatchSubDomains = $false
                     OutboundOnly    = $false
@@ -70,7 +70,7 @@
 
             DKIM                        = @(
                 @{
-                    Identity               = "checkyourpockets.club"
+                    Identity               = "missionpartners.us"
                     Enabled                = $true
                     AdminDisplayName       = ''
                     BodyCanonicalization   = 'Relaxed'
