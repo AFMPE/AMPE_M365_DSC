@@ -1,0 +1,5 @@
+backup/
+Output/
+testscripts/
+Production/
+**.bak

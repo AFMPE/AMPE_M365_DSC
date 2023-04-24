@@ -1,0 +1,29 @@
+name: Build and Deploy MOF
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  job1:
+    runs-on: windows-latest
+    name: Build MOF
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get Creds, Build, Deploy
+        shell: powershell
+        run: |
+          $PSVersionTable.PSVersion
+          winrm quickconfig -Force
+           Set-ExecutionPolicy Unrestricted -Force
+          $username = "${{secrets.CLIENT_ID}}"
+          $password = ConvertTo-SecureString "${{secrets.CLIENT_SECRET}}" -AsPlainText -Force
+          $psCreds = New-Object System.Management.Automation.PSCredential -ArgumentList ($username, $password)
+          .\build.ps1 -AdminCreds $psCreds
+          .\deploy.ps1 -Environment Production
