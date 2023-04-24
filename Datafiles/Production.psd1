@@ -34,6 +34,15 @@
             @{
                 Workload = 'Teams'
             }
+            @{
+                Workload = 'AzureAD'
+            }
+            @{
+                Workload = 'Intune'
+            }
+            @{
+                Workload = 'OneDrive'
+            }
         )
 
         Exchange       = @{
@@ -162,6 +171,22 @@
                     WhoCanRegister                             = "EveryoneInCompany"
                 }
             )
+        }
+
+        AzureAD = @{
+            ConditionalAccessPolicies = @(
+                @{
+                    
+                }
+            )
+        }
+
+        Intune = @{
+            
+        }
+
+        OneDrive = @{
+
         }
     }
 }
