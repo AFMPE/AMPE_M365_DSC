@@ -13,6 +13,7 @@
             Name             = 'Production'
             ShortName        = 'PRD'
             OrganizationName = "missionpartners.us"
+            AlertName = "security_notifications@missionpartners.us"
         }
         
         Accounts       = @(
@@ -51,7 +52,7 @@
                     Name                  = "missionpartners.us"
                     ArchiveAccessEnabled  = $false
                     DeliveryReportEnabled = $false
-                    DomainNames           = @("missionpartners.us")
+                    DomainNames           = @(,"afmpe.onmicrosoft.com")
                     Enabled               = $true
                     FreeBusyAccessEnabled = $true
                     FreeBusyAccessLevel   = "LimitedDetails"
