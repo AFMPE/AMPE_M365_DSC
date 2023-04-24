@@ -173,13 +173,50 @@
             )
         }
 
+        
         AzureAD = @{
-            ConditionalAccessPolicies = @(
+            RoleSettings = @(
                 @{
-                    
+                    Id                                                        = "62e90394-69f5-4237-9190-012177145e10"
+                    ActivateApprover                                          = @()
+                    ActivationMaxDuration                                     = "PT8H"
+                    ActivationReqJustification                                = $true
+                    ActivationReqMFA                                          = $true
+                    ActivationReqTicket                                       = $false
+                    ActiveAlertNotificationDefaultRecipient                   = $true
+                    ActiveAlertNotificationOnlyCritical                       = $False
+                    ActiveApproveNotificationAdditionalRecipient              = @()
+                    ActiveApproveNotificationDefaultRecipient                 = $true
+                    ActiveApproveNotificationOnlyCritical                     = $false
+                    ActiveAssigneeNotificationAdditionalRecipient             = @()
+                    ActiveAssigneeNotificationDefaultRecipient                = $true
+                    ActiveAssigneeNotificationOnlyCritical                    = $false
+                    ApprovaltoActivate                                        = $false
+                    AssignmentReqJustification                                = $true
+                    AssignmentReqMFA                                          = $false
+                    Displayname                                               = "Global Administrator"
+                    ElegibilityAssignmentReqJustification                     = $false
+                    ElegibilityAssignmentReqMFA                               = $false
+                    EligibleAlertNotificationDefaultRecipient                 = $true
+                    EligibleAlertNotificationOnlyCritical                     = $false
+                    EligibleApproveNotificationAdditionalRecipient            = @()
+                    EligibleApproveNotificationDefaultRecipient               = $true
+                    EligibleApproveNotificationOnlyCritical                   = $false
+                    EligibleAssigneeNotificationAdditionalRecipient           = @()
+                    EligibleAssigneeNotificationDefaultRecipient              = $true
+                    EligibleAssigneeNotificationOnlyCritical                  = $false
+                    EligibleAssignmentAlertNotificationDefaultRecipient       = $true
+                    EligibleAssignmentAlertNotificationOnlyCritical           = $false
+                    EligibleAssignmentAssigneeNotificationAdditionalRecipient = @()
+                    EligibleAssignmentAssigneeNotificationDefaultRecipient    = $true
+                    EligibleAssignmentAssigneeNotificationOnlyCritical        = $false
+                    ExpireActiveAssignment                                    = "P15D"
+                    ExpireEligibleAssignment                                  = "P365D"
+                    PermanentActiveAssignmentisExpirationRequired             = $true
+                    PermanentEligibleAssignmentisExpirationRequired           = $true
                 }
             )
-        }
+        } # End Hash Table
 
         Intune = @{
             
