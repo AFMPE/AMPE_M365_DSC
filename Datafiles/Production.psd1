@@ -14,7 +14,7 @@
             ShortName        = 'PRD'
             OrganizationName = "missionpartners.us"
             AlertName = "security_notifications@missionpartners.us"
-        }
+        } # End Hash Table
         
         Accounts       = @(
             @{
@@ -44,7 +44,7 @@
             @{
                 Workload = 'OneDrive'
             }
-        )
+        ) # End hash Table
 
         Exchange       = @{
             OrganizationalRelationships = @(
@@ -66,7 +66,7 @@
                     TargetOwaURL          = ""
                     TargetSharingEpr      = ""
                 }
-            )
+            ) # End Organizational Policies
 
             AcceptedDomains             = @(
                 @{
@@ -76,7 +76,7 @@
                     OutboundOnly    = $false
                     Ensure          = 'Present'
                 }
-            )
+            ) # End Accepted Domains
 
             DKIM                        = @(
                 @{
@@ -87,11 +87,11 @@
                     HeaderCanonicalization = 'Relaxed'
                     KeySize                = 1024
                 }
-            )
+            ) # End DKIM
 
             InboundConnectors           = @()
             OutboundConnectors          = @()
-        }
+        } # End Hash Table
 
         Teams          = @{
 
@@ -103,7 +103,7 @@
                 SdnLicenseId                        = ""
                 SdnProviderName                     = ""
                 SupportURL                          = "https://support.office.com/home/contact"
-            }
+            } # End Meeting Broadcast Configuration
 
             MeetingBroadcastPolicies      = @(
                 @{
@@ -113,7 +113,7 @@
                     BroadcastAttendeeVisibilityMode = "EveryoneInCompany"
                     BroadcastRecordingMode          = "UserOverride"
                 }
-            )
+            ) # End Meeting Broadcast Policies
 
             MeetingConfiguration          = @{
                 Identity                    = "Global"
@@ -126,7 +126,7 @@
                 ClientVideoPortRange        = 20
                 DisableAnonymousJoin        = $false
                 EnableQoS                   = $false
-            }
+            } # End meeting Configurations
 
             MeetingPolicies               = @(
                 @{
@@ -171,8 +171,8 @@
                     VideoFiltersMode                           = "AllFilters"
                     WhoCanRegister                             = "EveryoneInCompany"
                 }
-            )
-        }
+            ) # End Meeting Policies
+        } # End Hash Table
 
         
         AzureAD = @{
@@ -216,7 +216,7 @@
                     PermanentActiveAssignmentisExpirationRequired             = $true
                     PermanentEligibleAssignmentisExpirationRequired           = $true
                 }
-            )
+            ) # End Role Settings
         } # End Hash Table
 
         Intune = @{
